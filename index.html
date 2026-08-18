@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Wellness Party × Rostros</title>
+<style>
+  :root{
+    --olivo:#24231c; --olivo-2:#3a382c; --olivo-3:#5b5745;
+    --oro:#d9b98c; --oro-vivo:#e8cda2; --rosa:#dcb3a4; --salvia:#a8c096;
+    --crema:#e9e1d3; --crema-dim:#c9c0ae; --linea:rgba(217,185,140,.28);
+    --panel:rgba(255,255,255,.04);
+  }
+  *{box-sizing:border-box}
+  img{max-width:100%}
+  body{
+    margin:0; background:linear-gradient(160deg,#3a382c 0%,#24231c 55%,#1c1b15 100%) fixed;
+    background-color:#24231c; color:var(--crema);
+    font:16px/1.7 Jost,"Segoe UI",system-ui,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 24px 90px}
+  .serif{font-family:"Playfair Display",Didot,"Bodoni MT",Georgia,serif}
+  .rotulo{
+    font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--oro);
+    margin:0 0 10px;font-weight:500;
+  }
+  h1{
+    font-family:"Playfair Display",Didot,"Bodoni MT",Georgia,serif;font-weight:600;
+    font-size:clamp(32px,6vw,50px);line-height:1.1;margin:0 0 14px;color:var(--oro-vivo);
+    text-wrap:balance;
+  }
+  h2{
+    font-family:"Playfair Display",Didot,"Bodoni MT",Georgia,serif;font-weight:600;
+    font-size:clamp(21px,3.4vw,27px);line-height:1.25;margin:0 0 14px;color:var(--oro);
+    text-wrap:balance;
+  }
+  .lema{font-style:italic;color:var(--rosa);font-size:19px;margin:0}
+  header.portada{
+    border-bottom:1px solid var(--linea);padding-bottom:36px;margin-bottom:14px;text-align:center;
+  }
+  .meta-evento{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:22px;
+    font-size:14px;color:var(--crema-dim);
+  }
+  .meta-evento strong{color:var(--crema);font-weight:500}
+  section{padding:36px 0;border-bottom:1px solid var(--linea)}
+  section:last-of-type{border-bottom:none}
+  p{margin:0 0 14px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  strong{color:var(--oro-vivo);font-weight:600}
+  a{color:var(--oro-vivo);text-decoration-color:rgba(217,185,140,.5)}
+  ul{margin:0;padding-left:1.2em;max-width:66ch}
+  li{margin:7px 0}
+  li::marker{color:var(--oro)}
+  .panel{
+    background:var(--panel);border:1px solid var(--linea);border-radius:12px;
+    padding:20px 24px;margin:18px 0;
+  }
+  .dos-col{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+  @media(max-width:560px){.dos-col{grid-template-columns:1fr}}
+  .invitada{font-size:15px;color:var(--crema);padding:3px 0;border-bottom:1px dashed rgba(217,185,140,.15)}
+  .tag{
+    display:inline-block;background:rgba(217,185,140,.12);border:1px solid var(--linea);
+    color:var(--oro-vivo);border-radius:999px;padding:2px 13px;font-size:13px;margin:3px 4px 3px 0;
+  }
+  .confirmar{
+    display:inline-block;background:rgba(220,179,164,.14);border:1px solid rgba(220,179,164,.4);
+    color:var(--rosa);border-radius:6px;padding:1px 9px;font-size:12.5px;letter-spacing:.04em;
+    font-weight:500;white-space:nowrap;
+  }
+  .hilo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:8px}
+  .momento{background:var(--panel);border:1px solid var(--linea);border-radius:12px;padding:16px 18px}
+  .momento__h{font-family:Didot,Georgia,serif;font-size:24px;color:var(--oro-vivo);margin:0 0 4px}
+  .momento__t{font-weight:600;color:var(--crema);margin:0 0 4px;font-size:15px}
+  .momento__d{font-size:13.5px;color:var(--crema-dim);margin:0;line-height:1.55}
+  .firma{
+    text-align:center;color:var(--crema-dim);font-size:13.5px;padding-top:36px;
+    border-top:1px solid var(--linea);margin-top:10px;
+  }
+  .qr-fila{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin:26px 0 10px}
+  .qr{margin:0;text-align:center}
+  .qr img{border-radius:12px;border:1px solid var(--linea);display:block;margin:0 auto 10px;max-width:100%}
+  .qr figcaption{font-size:13.5px;color:var(--crema-dim);line-height:1.5}
+  .qr figcaption strong{color:var(--oro-vivo)}
+  .nota-logos{
+    background:rgba(168,192,150,.1);border:1px solid rgba(168,192,150,.35);border-radius:10px;
+    padding:14px 18px;font-size:14px;color:var(--salvia);margin-top:20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="portada">
+    <p class="rotulo">Dossier de prensa · Revista Rostros · Cuestionario del evento</p>
+    <h1>Wellness Party — Brunch &amp; Yoga</h1>
+    <p class="lema">"Mueve tu cuerpo, nutre tu alma y silencia tu mente."</p>
+    <div class="meta-evento">
+      <span><strong>Jueves 13 de agosto de 2026</strong> · 9:00 AM – 2:00 PM</span>
+      <span>NISSO Restaurant &amp; Bakery · Puebla</span>
+      <span>Aforo completo · 30 lugares</span>
+    </div>
+  </header>
+
+  <section>
+    <p class="rotulo">Nombre del cliente</p>
+    <h2>Dra. Dafne Arellano</h2>
+    <p>
+      <strong>Dra. Dafne Arellano Montalvo</strong>, Médico Especialista en Medicina Estética (Cédula Profesional 9048813) — <a href="https://www.drdafnearellano.com">drdafnearellano.com</a> — creadora también de la línea de dermocosmética <strong>DermaPharma</strong> — <a href="https://dermapharma.mx">dermapharma.mx</a>. Su práctica está respaldada por la Clínica Dermatológica y Cirugía Estética de Puebla, fundada por su familia hace 54 años.
+    </p>
+  </section>
+
+  <section>
+    <p class="rotulo">Descripción del evento</p>
+    <h2>Un concepto nuevo en Puebla: medicina estética que se vive, no solo se consulta</h2>
+    <p>
+      La Wellness Party no es una sucursal ni una apertura: es un <strong>concepto nuevo</strong>, la primera edición de una experiencia de bienestar creada por la Dra. Dafne Arellano que saca la medicina estética del consultorio y la lleva a una mañana completa de yoga, brunch y belleza entre amigas. Una sola sede clínica la respalda: la Clínica Dermatológica y Cirugía Estética de Puebla, en la colonia Bella Vista, con <strong>54 años de historia</strong>.
+    </p>
+    <p>
+      La mañana comenzó con un <strong>cocktail de bienvenida</strong> — jugo verde cold-pressed y platos de fruta energética — mientras las invitadas llegaban; los más pequeños tuvieron su propio <strong>snack bar infantil</strong>. A las 9:00 en punto, la clase de yoga abrió el día; después, un brunch francés servido por la panadería de NISSO, y el cierre beauty: diagnóstico facial, prueba de la nueva línea de mascarillas LED de DermaPharma y consultas personalizadas con la doctora.
+    </p>
+  </section>
+
+  <section>
+    <p class="rotulo">Socios / Organizó</p>
+    <h2>Tres marcas, una alianza</h2>
+    <ul>
+      <li><strong>Dra. Dafne Arellano Montalvo</strong> — creadora y anfitriona del evento · <a href="https://www.drdafnearellano.com">drdafnearellano.com</a></li>
+      <li><strong>NISSO Restaurant &amp; Bakery</strong> — sede y menú · restaurante y panadería francesa</li>
+      <li><strong>DermaPharma</strong> — dermocosmética y regalos · <a href="https://dermapharma.mx">dermapharma.mx</a></li>
+      <li><strong>Jei Cruz</strong> (<a href="https://instagram.com/jei_cruz_networker">@jei_cruz_networker</a>) — co-creación y networking</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="rotulo">Lugar</p>
+    <h2>NISSO Restaurant &amp; Bakery</h2>
+    <p>
+      Av. Zeta del Cochero #403, Puebla. <span class="confirmar">CONFIRMAR con Dafne: plaza / colonia exacta para publicación</span>
+    </p>
+  </section>
+
+  <section>
+    <p class="rotulo">Concepto · Semblanza e historia</p>
+    <h2>54 años y tres generaciones detrás de una mañana</h2>
+    <p>
+      La historia empieza en <strong>1971</strong>, cuando el dermatólogo <strong>Prof. Dr. Francisco Arellano Ocampo</strong> fundó la clínica que hoy es referente de la dermatología y la cirugía estética en Puebla. La práctica continuó con el <strong>Dr. Arístides Arellano Huacuja</strong>, cirujano plástico y reconstructivo, y hoy suma su <strong>tercera generación</strong> con la Dra. Dafne Arellano Montalvo, quien integra medicina estética, longevidad y bienestar.
+    </p>
+    <p>
+      La Wellness Party es la traducción de esa filosofía a una experiencia: cuidar la piel es parte de un estilo de vida que también incluye moverse, comer bien y detenerse a respirar. De ahí el lema del evento: <em>"Mueve tu cuerpo, nutre tu alma y silencia tu mente."</em>
+    </p>
+  </section>
+
+  <section>
+    <p class="rotulo">Invitados especiales</p>
+    <h2>Quiénes acompañaron a la doctora</h2>
+    <ul>
+      <li><strong>Alma Trujillo</strong> — locutora de <strong>La 96.1 FM</strong> (<a href="https://instagram.com/alma_trukillo">@alma_trukillo</a>)</li>
+      <li><strong>Giselle Islas Corzas</strong> — instructora de yoga (<a href="https://instagram.com/gi_yogi_">@gi_yogi_</a>), quien guió la clase de las 9:00</li>
+      <li><strong>Jei Cruz</strong> — networker y co-creador del evento (<a href="https://instagram.com/jei_cruz_networker">@jei_cruz_networker</a>)</li>
+      <li><strong>Revista Rostros</strong> — cobertura editorial y fotográfica del evento</li>
+    </ul>
+    <p style="margin-top:16px">Con la participación de los laboratorios y marcas:</p>
+    <div>
+      <span class="tag">Allergan · BOTOX®</span>
+      <span class="tag">Galderma · Sculptra®</span>
+      <span class="tag">IBSA · Aliaxin® y Profhilo®</span>
+      <span class="tag">Alidya®</span>
+      <span class="tag">Sofwave® (HIFU) · softwave.mx</span>
+      <span class="tag">Filorga</span>
+      <span class="tag">Arfamex</span>
+      <span class="tag">DermaPharma Skincare</span>
+    </div>
+    <p style="margin-top:14px; font-size:14.5px; color:var(--crema-dim)">
+      Cada laboratorio estuvo presente con sus especialistas para resolver dudas de primera mano. <strong>Allergan (BOTOX®)</strong> obsequió a las asistentes una cosmetiquera-lonchera exclusiva; <strong>DermaPharma</strong> regaló cremas seleccionadas de su catálogo.
+    </p>
+  </section>
+
+  <section>
+    <p class="rotulo">Servicios · La experiencia</p>
+    <h2>Cómo se vivió la mañana</h2>
+    <div class="hilo">
+      <div class="momento"><p class="momento__h">8:45</p><p class="momento__t">Bienvenida</p><p class="momento__d">Cocktail de jugo verde y platos de fruta energética; snack bar para los niños.</p></div>
+      <div class="momento"><p class="momento__h">9:00</p><p class="momento__t">Yoga</p><p class="momento__d">Clase para todos los niveles guiada por Giselle Islas (@gi_yogi_).</p></div>
+      <div class="momento"><p class="momento__h">10:30</p><p class="momento__t">Brunch &amp; café</p><p class="momento__d">Mesa francesa de NISSO Bakery: pan del día, fruta, café de especialidad y algo dulce.</p></div>
+      <div class="momento"><p class="momento__h">11:30</p><p class="momento__t">Beauty</p><p class="momento__d">Diagnóstico de piel, prueba de mascarillas LED y consultas uno a uno hasta las 2:00 PM.</p></div>
+    </div>
+    <div class="panel">
+      <ul>
+        <li><strong>Consultas personalizadas con la Dra. Dafne Arellano</strong> — armonización facial, arrugas y plan de piel individual.</li>
+        <li><strong>Diagnóstico facial</strong> con máscara de análisis de piel, ahí mismo.</li>
+        <li><strong>Prueba de la nueva línea de fototerapia LED de DermaPharma</strong> — la mascarilla facial y el casco capilar de luz que ya están disponibles en <a href="https://dermapharma.mx">dermapharma.mx</a>.</li>
+        <li><strong>Demostración de Sofwave®</strong> (ultrasonido HIFU de lifting) — presentación en vivo del equipo.</li>
+        <li><strong>25% de descuento</strong> en los tratamientos del evento, válido solo esa mañana: Botox®, Profhilo®, Profhilo® Structura, PDRN, Facial Coreano y Oxygeneo®.</li>
+        <li><strong>Sorteos, sorpresas y regalos</strong> de los laboratorios participantes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p class="rotulo">Asistentes · Número</p>
+    <h2>Aforo completo: 30 lugares</h2>
+    <p>
+      El registro se llenó por completo — 30 lugares distribuidos en tres mesas, más los invitados especiales y los equipos de los laboratorios. Entre las asistentes:
+    </p>
+    <div class="panel dos-col">
+      <span class="invitada">Pilar M.</span>
+      <span class="invitada">Leonor C.</span>
+      <span class="invitada">Nataly Laniel G.</span>
+      <span class="invitada">Aremy M.</span>
+      <span class="invitada">Cinthia C.</span>
+      <span class="invitada">Andrea D.</span>
+      <span class="invitada">Adriana C.</span>
+      <span class="invitada">Sandra Eugenia C.</span>
+      <span class="invitada">Oyuki S.</span>
+      <span class="invitada">María M.</span>
+      <span class="invitada">Diana G.</span>
+      <span class="invitada">Bárbara D.</span>
+      <span class="invitada">Carmenmary V.</span>
+      <span class="invitada">Paulina E.</span>
+      <span class="invitada">Nadia Q.</span>
+      <span class="invitada">Tania W.</span>
+      <span class="invitada">Viviana P.</span>
+      <span class="invitada">Ericka R.</span>
+      <span class="invitada">Melani L.</span>
+      <span class="invitada">July P.</span>
+      <span class="invitada">Leidy R.</span>
+    </div>
+    <p style="font-size:13.5px;color:var(--crema-dim)">Se publican nombre de pila e inicial por privacidad de las asistentes.</p>
+  </section>
+
+  <section>
+    <p class="rotulo">Corte de listón</p>
+    <h2><span class="confirmar">CONFIRMAR con Dafne</span></h2>
+    <p style="font-size:14.5px;color:var(--crema-dim)">
+      ¿Hubo corte de listón / momento inaugural? ¿Quién lo realizó? (Si no lo hubo, se responde a Rostros: "No aplica — el evento abrió con la clase de yoga como momento inaugural.")
+    </p>
+  </section>
+
+  <section>
+    <p class="rotulo">Menú</p>
+    <h2>Brunch by NISSO — menú de autor creado para el evento</h2>
+    <p style="font-size:14.5px;color:var(--crema-dim)">Cada lugar recibió un mini menú impreso diseñado con la identidad del evento. La carta:</p>
+    <div class="panel">
+      <p class="rotulo" style="color:var(--rosa)">De la barra</p>
+      <ul>
+        <li><strong>Tosta de Salmón</strong> — pan artesanal, queso crema y salmón ahumado</li>
+        <li><strong>Baguette de Jamón Serrano</strong> — provolone y arúgula</li>
+        <li><strong>Yogurt con Granola</strong> — miel y frutos de temporada</li>
+        <li><strong>Frutas de la Estación</strong></li>
+      </ul>
+      <p class="rotulo" style="color:var(--rosa);margin-top:16px">Plato fuerte · a elegir</p>
+      <ul>
+        <li><strong>Avo-Toast</strong> — pan de masa madre, aguacate y huevo pochado</li>
+        <li><strong>Omelette Veggie</strong> — espinaca, champiñones y jitomate</li>
+        <li><strong>Enchiladas Verdes</strong> — pollo, crema y queso fresco</li>
+        <li><strong>Chilaquiles con Pollo</strong> — salsa verde o roja, crema y queso</li>
+      </ul>
+      <p class="rotulo" style="color:var(--rosa);margin-top:16px">Dulce final</p>
+      <ul>
+        <li><strong>Berries D'Oro</strong> — frutos rojos, cremoso de mascarpone y láminas de oro, el postre insignia del evento</li>
+      </ul>
+    </div>
+    <p style="font-size:14.5px;color:var(--crema-dim)">Además: platos de fruta energética de bienvenida y <strong>snack bar infantil</strong> para los pequeños acompañantes.</p>
+  </section>
+
+  <section>
+    <p class="rotulo">Bebidas</p>
+    <h2>Jugos de la casa y barra de café illy</h2>
+    <ul>
+      <li><strong>Jugo Verde</strong> — jengibre, piña y espinaca (cocktail de bienvenida)</li>
+      <li><strong>Jugo Oasis</strong> — piña, fresa y naranja</li>
+      <li><strong>Naranja</strong> recién exprimida</li>
+      <li><strong>Barra de café illy</strong> — americano, capuchino, latte y espresso</li>
+      <li><strong>Té</strong> — verde, manzanilla y negro</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="rotulo">Contacto</p>
+    <h2>Dónde encontrarlas</h2>
+    <div class="panel">
+      <ul>
+        <li><strong>Dra. Dafne Arellano:</strong> <a href="https://www.drdafnearellano.com">www.drdafnearellano.com</a> · WhatsApp <strong>+52 221 207 8722</strong> · C. 20 Sur #2539, Col. Bella Vista, Puebla · Instagram <a href="https://instagram.com/laserpuebla">@laserpuebla</a></li>
+        <li><strong>DermaPharma:</strong> <a href="https://dermapharma.mx">www.dermapharma.mx</a> — dermocosmética y la nueva colección de fototerapia LED (mascarilla facial y casco capilar)</li>
+      </ul>
+    </div>
+    <div class="qr-fila">
+      <figure class="qr">
+        <img src="data:image/png;base64,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" alt="Código QR — drdafnearellano.com" width="170" height="170">
+        <figcaption><strong>Dra. Dafne Arellano</strong><br>drdafnearellano.com</figcaption>
+      </figure>
+      <figure class="qr">
+        <img src="data:image/png;base64,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" alt="Código QR — dermapharma.mx" width="170" height="170">
+        <figcaption><strong>DermaPharma</strong><br>dermapharma.mx</figcaption>
+      </figure>
+    </div>
+    <p style="font-size:13.5px;color:var(--crema-dim);text-align:center">Códigos QR listos para la publicación impresa — escanean directo a cada sitio.</p>
+  </section>
+
+  <section>
+    <p class="rotulo">Sumario · Detalles a destacar</p>
+    <h2>Lo que hizo especial la mañana</h2>
+    <ul>
+      <li><strong>Identidad visual propia:</strong> paleta oliva y oro con póster de pan de oro — la estética del evento se diseñó como una pieza editorial, no como un flyer comercial.</li>
+      <li><strong>Un formato íntimo a propósito:</strong> tres mesas, treinta lugares. "Es un brunch, no un auditorio."</li>
+      <li><strong>25% de descuento</strong> en los tratamientos del evento, válido únicamente esa mañana y siempre con valoración médica previa.</li>
+      <li><strong>Regalos:</strong> cremas de <a href="https://dermapharma.mx">DermaPharma</a> y la cosmetiquera-lonchera de Allergan (BOTOX®) para las asistentes.</li>
+      <li><strong>Sorteos</strong> con premios de los laboratorios participantes.</li>
+      <li><strong>El puente clínica-casa:</strong> las asistentes probaron en vivo la nueva línea de <strong>fototerapia LED de DermaPharma</strong> — la mascarilla facial y el casco capilar — disponible en <a href="https://dermapharma.mx">dermapharma.mx</a>, con la guía médica de la Dra. Dafne sobre cómo integrarla a su rutina.</li>
+      <li><strong>54 años de respaldo médico:</strong> tres generaciones de la familia Arellano detrás de un evento que une medicina estética, nutrición y movimiento.</li>
+    </ul>
+    <div class="nota-logos">
+      <strong>Nota para Rostros:</strong> los logotipos para publicación son dos — <strong>Dra. Dafne Arellano</strong> y <strong>DermaPharma</strong> — y se entregan en alta resolución por separado junto con la selección fotográfica y los códigos QR de esta página.
+    </div>
+  </section>
+
+  <p class="firma">
+    Dossier preparado para Revista Rostros · Wellness Party, 13 de agosto de 2026 · Dra. Dafne Arellano Montalvo · drdafnearellano.com · dermapharma.mx<br>
+    Documento interno de revisión: los puntos marcados en rosa quedan pendientes de confirmar con la Dra. Dafne antes de enviarse.
+  </p>
+
+</div>
+
+</body>
+</html>
